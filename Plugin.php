@@ -1,5 +1,6 @@
 <?php namespace Keios\Multisite;
 
+use Cms\Controllers\Themes;
 use System\Classes\PluginBase;
 use Keios\Multisite\Models\Setting;
 use BackendAuth;
@@ -10,6 +11,7 @@ use Cache;
 use Request;
 use App;
 use Flash;
+use Backend\Widgets\Form;
 
 /**
  * Multisite Plugin Information File
@@ -68,6 +70,7 @@ class Plugin extends PluginBase
 
     /**
      * Multisite boot method
+     *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      * @throws \UnexpectedValueException
      */
@@ -96,7 +99,8 @@ class Plugin extends PluginBase
 
                 return $cacheableRecords;
 
-            });
+            }
+        );
         /*
          * Oooops something went wrong, abort.
          */
@@ -110,7 +114,8 @@ class Plugin extends PluginBase
         foreach ($binds as $domain => $bind) {
             if (preg_match('/\\'.$backendUri.'/', $requestUrl) && preg_match(
                     '/'.$currentHostUrl.'/i',
-                    $domain) && $bind['is_protected']
+                    $domain
+                ) && $bind['is_protected']
             ) {
                 return App::abort(401, 'Unauthorized.');
             }
@@ -137,7 +142,20 @@ class Plugin extends PluginBase
                         return $bind['theme'];
                     }
                 }
-            });
+            }
+        );
+
+        Event::listen(
+            'backend.page.beforeDisplay',
+            function (Backend\Classes\Controller $widget) {
+
+                if (!$widget instanceof Themes) {
+                    return;
+                }
+                
+                $widget->addViewPath('$/keios/multisite/partials/');
+            }
+        );
     }
 
 }

@@ -1,19 +1,11 @@
 <?php
 return [
-    'plugin' => [
-        'manage_domains' => 'Wsparcie dla wielu domen',
-        'tab' => 'Multisite'
-    ],
-    
     'details' => [
-        
         'title' => 'Domeny',
         'description' => 'Wsparcie dla wielu domen dla OctoberCMS',
         'description2' => 'Przydzielaj domeny do szablonów',
-        'problem' => 'Nie znaleziono tabeli wtyczki, zreinstaluj wtyczkę.'
-    ]
-    ,
-    
+        'problem' => 'Nie znaleziono tabeli wtyczki, zreinstaluj wtyczkę.',
+    ],
     'controller' => [
         'settings' => 'Ustawienia',
         'confirm' => 'Na pewno?',
@@ -32,10 +24,9 @@ return [
         'saving' => 'Zapisywanie ...',
         'save-and-close' => 'Zapisz i zamknij',
         'save-delete' => 'Usuń zapis',
-        'new' => 'Nowa domena',
-        'clear' => 'Wyczyść cache',
+        'new' => 'keios.multisite::lang.controller.new',
+        'clear' => 'keios.multisite::lang.controller.clear',
     ],
-    
     'domain' => [
         'label' => 'Domena, którą ustawić dla szablonu',
         'comment' => 'Podaj pełny URL, np: http://well-designed.eu/',
@@ -43,13 +34,12 @@ return [
         'theme-comment' => 'Wybierz szablon dla tej domeny',
         'protect-label' => 'Chroń szablon dla tej domeny',
         'protect-comment' => 'Zaznacz, jeśli chcesz zablokować dostęp do backendu przez tą domenę. Wyświetla Błąd 401 lub stronę /error',
-        'theme' => 'Szablon',
-        'protect' => 'Chroń dostęp do backendu',
+        'theme' => 'keios.multisite::lang.domain.theme',
+        'protect' => 'keios.multisite::lang.domain.protect',
     ],
-    
     'flash' => [
         'cache-clear' => 'Cache został wyczyszczony.',
-        'cache' => 'Cache został wyczyszczony',
+        'cache' => 'keios.multisite::lang.flash.cache',
     ],
     'tables' => [
         'domain' => 'Domena',
