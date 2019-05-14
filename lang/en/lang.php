@@ -37,6 +37,10 @@ return [
         'theme'           => 'Theme',
         'protect'         => 'Protect',
     ],
+    'meta'        => [
+        'label'           => 'Meta data',
+        'comment'         => 'Arbitrary data in JSON format',
+    ],
     'flash'       => [
         'cache-clear' => 'Cache cleared',
         'db-error'    => 'Multisite plugin tables not found, force reinstall plugin.',
@@ -46,6 +50,7 @@ return [
         'domain'    => 'Domain',
         'theme'     => 'Theme',
         'protected' => 'Protected?',
+        'meta'      => 'Meta',
     ],
     'permissions' => [
         'tab'      => 'MultiSite',

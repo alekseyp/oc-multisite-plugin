@@ -33,7 +33,7 @@ class Setting extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = ['domain', 'theme', 'is_protected'];
+    protected $fillable = ['domain', 'theme', 'is_protected', 'meta'];
 
     /*
      * Get all currently available themes, return them to form widget for selection
@@ -97,6 +97,7 @@ class Setting extends Model
             $cacheableRecords[$record['domain']] = [
                 'theme'        => $record['theme'],
                 'is_protected' => $record['is_protected'],
+                'meta' => $record['meta'],
             ];
         }
 

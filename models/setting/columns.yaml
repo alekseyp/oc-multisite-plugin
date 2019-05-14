@@ -14,3 +14,6 @@ columns:
     is_protected:
         label: keios.multisite::lang.tables.protected
         type: switch
+
+    meta:
+        label: keios.multisite::lang.tables.meta

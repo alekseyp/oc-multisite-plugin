@@ -18,3 +18,8 @@ fields:
         type: checkbox
         default: false
         comment: keios.multisite::lang.domain.protect-comment
+
+    meta:
+        label: keios.multisite::lang.meta.label
+        type: textarea
+        comment: keios.multisite::lang.meta.comment

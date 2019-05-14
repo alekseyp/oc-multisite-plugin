@@ -134,11 +134,11 @@ class Plugin extends PluginBase
          */
         Event::listen(
             'cms.theme.getActiveTheme',
-            function () use ($binds, $currentHostUrl) {
+            function () use (&$binds, &$currentHostUrl) {
                 foreach ($binds as $domain => $bind) {
                     if (preg_match('/'.$currentHostUrl.'/i', $domain)) {
                         Config::set('app.url', $domain);
-
+                        Config::set('site.meta', json_decode($bind['meta'], true));
                         return $bind['theme'];
                     }
                 }
@@ -152,7 +152,7 @@ class Plugin extends PluginBase
                 if (!$widget instanceof Themes) {
                     return;
                 }
-                
+
                 $widget->addViewPath('$/keios/multisite/partials/');
             }
         );
