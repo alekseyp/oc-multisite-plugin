@@ -4,7 +4,7 @@
 
 fields:
     domain:
-        label: keios.multisite::lang.domain.label 
+        label: keios.multisite::lang.domain.label
         type: text
         comment: keios.multisite::lang.domain.comment
 
@@ -22,4 +22,5 @@ fields:
     meta:
         label: keios.multisite::lang.meta.label
         type: textarea
+        default: "null"
         comment: keios.multisite::lang.meta.comment
