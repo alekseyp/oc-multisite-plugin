@@ -4,18 +4,18 @@ use Seeder;
 use System\Classes\PluginManager;
 
 /**
- * Class KeiosMigrate
+ * Class AlekseyPMigrate
  * @package Alekseyp\Multisite\Seeds
  */
-class KeiosMigrate extends Seeder
+class AlekseypMigrate extends Seeder
 {
     /**
      * Migrates old table to new
      */
     public function run()
     {
-        if (\Schema::hasTable('voipdeploy_multisite_settings')) {
-            $rows = \DB::table('voipdeploy_multisite_settings')->get(
+        if (\Schema::hasTable('keios_multisite_settings')) {
+            $rows = \DB::table('keios_multisite_settings')->get(
                 [
                     'domain',
                     'theme',
@@ -30,13 +30,13 @@ class KeiosMigrate extends Seeder
                 $data[] = get_object_vars($row);
             }
 
-            \DB::table('keios_multisite_settings')->insert($data);
+            \DB::table('alekseyp_multisite_settings')->insert($data);
 
-            if (PluginManager::instance()->exists('Voipdeploy.Multisite')) {
-                \Artisan::call('plugin:remove', ['name' => 'Voipdeploy.Multisite', '--force' => true]);
+            if (PluginManager::instance()->exists('Keios.Multisite')) {
+                \Artisan::call('plugin:remove', ['name' => 'Keios.Multisite', '--force' => true]);
             }
 
-            \Schema::dropIfExists('voipdeploy_multisite_settings');
+            \Schema::dropIfExists('keios_multisite_settings');
         }
 
     }

@@ -1,9 +1,9 @@
-<?php namespace Keios\Multisite\Controllers;
+<?php namespace Alekseyp\Multisite\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 use System\Classes\SettingsManager;
-use Keios\Multisite\Models\Setting;
+use Alekseyp\Multisite\Models\Setting;
 use Cache;
 use Flash;
 use Lang;
@@ -38,7 +38,7 @@ class Settings extends Controller
         parent::__construct();
 
         BackendMenu::setContext('October.System', 'system', 'settings');
-        SettingsManager::setContext('Keios.Multisite', 'multisite');
+        SettingsManager::setContext('alekseyp.multisite', 'multisite');
     }
 
     /**
@@ -59,8 +59,7 @@ class Settings extends Controller
      */
     public function onClearCache()
     {
-        Cache::forget('keios_multisite_settings');
-        Flash::success(Lang::get('keios.multisite::lang.flash.cache-clear'));
+        Cache::forget('alekseyp_multisite_settings');
+        Flash::success(Lang::get('alekseyp.multisite::lang.flash.cache-clear'));
     }
 }
-

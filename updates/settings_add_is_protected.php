@@ -7,14 +7,14 @@ class SettingsAddIsProtected extends Migration
 {
     public function up()
     {
-        Schema::table('keios_multisite_settings', function ($table) {
+        Schema::table('alekseyp_multisite_settings', function ($table) {
             $table->boolean('is_protected')->default(false);
         });
     }
 
     public function down()
     {
-        Schema::table('keios_multisite_settings', function ($table) {
+        Schema::table('alekseyp_multisite_settings', function ($table) {
             $table->dropColumn('is_protected');
         });
     }

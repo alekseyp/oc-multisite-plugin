@@ -4,16 +4,16 @@
 
 columns:
     domain:
-        label: keios.multisite::lang.tables.domain
+        label: alekseyp.multisite::lang.tables.domain
         searchable: true
 
     theme:
-        label: keios.multisite::lang.tables.theme
+        label: alekseyp.multisite::lang.tables.theme
         searchable: true
 
     is_protected:
-        label: keios.multisite::lang.tables.protected
+        label: alekseyp.multisite::lang.tables.protected
         type: switch
 
     meta:
-        label: keios.multisite::lang.tables.meta
+        label: alekseyp.multisite::lang.tables.meta

@@ -24,8 +24,8 @@ return [
         'saving' => 'Zapisywanie ...',
         'save-and-close' => 'Zapisz i zamknij',
         'save-delete' => 'Usuń zapis',
-        'new' => 'keios.multisite::lang.controller.new',
-        'clear' => 'keios.multisite::lang.controller.clear',
+        'new' => 'alekseyp.multisite::lang.controller.new',
+        'clear' => 'alekseyp.multisite::lang.controller.clear',
     ],
     'domain' => [
         'label' => 'Domena, którą ustawić dla szablonu',
@@ -34,12 +34,12 @@ return [
         'theme-comment' => 'Wybierz szablon dla tej domeny',
         'protect-label' => 'Chroń szablon dla tej domeny',
         'protect-comment' => 'Zaznacz, jeśli chcesz zablokować dostęp do backendu przez tą domenę. Wyświetla Błąd 401 lub stronę /error',
-        'theme' => 'keios.multisite::lang.domain.theme',
-        'protect' => 'keios.multisite::lang.domain.protect',
+        'theme' => 'alekseyp.multisite::lang.domain.theme',
+        'protect' => 'alekseyp.multisite::lang.domain.protect',
     ],
     'flash' => [
         'cache-clear' => 'Cache został wyczyszczony.',
-        'cache' => 'keios.multisite::lang.flash.cache',
+        'cache' => 'alekseyp.multisite::lang.flash.cache',
     ],
     'tables' => [
         'domain' => 'Domena',

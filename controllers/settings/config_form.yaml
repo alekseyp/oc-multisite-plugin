@@ -6,22 +6,22 @@
 name: Setting
 
 # Model Form Field configuration
-form: $/keios/multisite/models/setting/fields.yaml
+form: $/alekseyp/multisite/models/setting/fields.yaml
 
 # Model Class name
-modelClass: Keios\Multisite\Models\Setting
+modelClass: Alekseyp\Multisite\Models\Setting
 
 # Default redirect location
-defaultRedirect: keios/multisite/settings
+defaultRedirect: alekseyp/multisite/settings
 
 # Create page
 create:
-    title: keios.multisite::lang.controller.create
-    redirect: keios/multisite/settings/update/:id
-    redirectClose: keios/multisite/settings
+    title: alekseyp.multisite::lang.controller.create
+    redirect: alekseyp/multisite/settings/update/:id
+    redirectClose: alekseyp/multisite/settings
 
 # Update page
 update:
-    title: keios.multisite::lang.controller.create
-    redirect: keios/multisite/settings
-    redirectClose: keios/multisite/settings
+    title: alekseyp.multisite::lang.controller.create
+    redirect: alekseyp/multisite/settings
+    redirectClose: alekseyp/multisite/settings

@@ -1,5 +1,5 @@
 {
-    "name": "keios/multisite",
+    "name": "alekseyp/oc-multisite-plugin",
     "type": "october-plugin",
     "description": "Plugin for OctoberCMS allowing to assign different theme to different domains",
     "license": "MIT",
@@ -7,6 +7,9 @@
         {
             "name": "Keios Solutions",
             "email": "info@keios.eu"
+        },
+        {
+            "name": "Aleksey P"
         }
     ],
     "require": {}

@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/keios/multisite/models/setting/columns.yaml
+list: $/alekseyp/multisite/models/setting/columns.yaml
 
 # Model Class name
-modelClass: Keios\Multisite\Models\Setting
+modelClass: Alekseyp\Multisite\Models\Setting
 
 # List Title
-title: keios.multisite::lang.details.description2
+title: alekseyp.multisite::lang.details.description2
 
 # Link URL for each record
-recordUrl: keios/multisite/settings/update/:id
+recordUrl: alekseyp/multisite/settings/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

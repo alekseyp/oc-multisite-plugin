@@ -1,14 +1,14 @@
 ## Domain-based multisite plugin for OctoberCMS
 
-**https://bitbucket.org/keiosdevs/oc-multisite**
+This is fork of https://bitbucket.org/keiosdevs/oc-multisite
+
+Due to lack of development and my own need of custom features - it was forked.
+I appreciate all the original work done.
 
 #### Features:
 - Register themes for different domains
 - Filter which domains can use backend
-
-#### Warning
-
-If you use Multisite plugin from OctoberCMS Market, please do not use this repository. Voipdeploy brand is merging with Keios and this version of the plugin has all namespaces and table names replaced. As soon as our brand is upgraded in OctoberCMS Market, we will remove this notice.
+- Pass custom data for different domains
 
 #### How to use:
 
@@ -26,3 +26,7 @@ As theme selector of OctoberCMS will be overridden by this plugin, it will have 
 #### Caching
 
 Your settings are saved in database and cached using your configured cache service on every configuration save to avoid unneeded database calls.
+
+#### License
+
+MIT

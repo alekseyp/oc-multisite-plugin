@@ -1,4 +1,4 @@
-<?php namespace Keios\Multisite\Models;
+<?php namespace Alekseyp\Multisite\Models;
 
 use Model;
 use Config;
@@ -23,7 +23,7 @@ class Setting extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'keios_multisite_settings';
+    public $table = 'alekseyp_multisite_settings';
 
     /**
      * @var array Guarded fields
@@ -76,13 +76,13 @@ class Setting extends Model
     public function afterSave()
     {
         // forget current data
-        Cache::forget('keios_multisite_settings');
+        Cache::forget('alekseyp_multisite_settings');
 
         // get all records available now
         $cacheableRecords = Setting::generateCacheableRecords();
 
         //save them in cache
-        Cache::forever('keios_multisite_settings', $cacheableRecords);
+        Cache::forever('alekseyp_multisite_settings', $cacheableRecords);
     }
 
     /**

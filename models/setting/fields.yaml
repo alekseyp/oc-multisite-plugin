@@ -4,23 +4,23 @@
 
 fields:
     domain:
-        label: keios.multisite::lang.domain.label
+        label: alekseyp.multisite::lang.domain.label
         type: text
-        comment: keios.multisite::lang.domain.comment
+        comment: alekseyp.multisite::lang.domain.comment
 
     theme:
-        label: keios.multisite::lang.domain.theme-label
+        label: alekseyp.multisite::lang.domain.theme-label
         type: dropdown
-        comment: keios.multisite::lang.domain.theme-comment
+        comment: alekseyp.multisite::lang.domain.theme-comment
 
     is_protected:
-        label: keios.multisite::lang.domain.protect-label
+        label: alekseyp.multisite::lang.domain.protect-label
         type: checkbox
         default: false
-        comment: keios.multisite::lang.domain.protect-comment
+        comment: alekseyp.multisite::lang.domain.protect-comment
 
     meta:
-        label: keios.multisite::lang.meta.label
+        label: alekseyp.multisite::lang.meta.label
         type: textarea
         default: "null"
-        comment: keios.multisite::lang.meta.comment
+        comment: alekseyp.multisite::lang.meta.comment

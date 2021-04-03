@@ -7,14 +7,14 @@ class SettingsAddMeta extends Migration
 {
     public function up()
     {
-        Schema::table('keios_multisite_settings', function ($table) {
+        Schema::table('alekseyp_multisite_settings', function ($table) {
             $table->json('meta');
         });
     }
 
     public function down()
     {
-        Schema::table('keios_multisite_settings', function ($table) {
+        Schema::table('alekseyp_multisite_settings', function ($table) {
             $table->dropColumn('meta');
         });
     }

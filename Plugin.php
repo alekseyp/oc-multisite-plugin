@@ -1,8 +1,8 @@
-<?php namespace Keios\Multisite;
+<?php namespace Alekseyp\Multisite;
 
 use Cms\Controllers\Themes;
 use System\Classes\PluginBase;
-use Keios\Multisite\Models\Setting;
+use Alekseyp\Multisite\Models\Setting;
 use BackendAuth;
 use Backend;
 use Config;
@@ -29,9 +29,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'keios.multisite::lang.details.title',
-            'description' => 'keios.multisite::lang.details.description',
-            'author'      => 'Keios',
+            'name'        => 'alekseyp.multisite::lang.details.title',
+            'description' => 'alekseyp.multisite::lang.details.description',
+            'author'      => 'AlekseyP',
             'icon'        => 'icon-cubes',
         ];
     }
@@ -42,9 +42,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'keios.multisite.access_settings' => [
-                'tab'   => 'keios.multisite::lang.permissions.tab',
-                'label' => 'keios.multisite::lang.permissions.settings',
+            'alekseyp.multisite.access_settings' => [
+                'tab'   => 'alekseyp.multisite::lang.permissions.tab',
+                'label' => 'alekseyp.multisite::lang.permissions.settings',
             ],
         ];
     }
@@ -56,12 +56,12 @@ class Plugin extends PluginBase
     {
         return [
             'multisite' => [
-                'label'       => 'keios.multisite::lang.details.title',
-                'description' => 'keios.multisite::lang.details.description',
+                'label'       => 'alekseyp.multisite::lang.details.title',
+                'description' => 'alekseyp.multisite::lang.details.description',
                 'category'    => 'system::lang.system.categories.cms',
                 'icon'        => 'icon-cubes',
-                'url'         => Backend::url('keios/multisite/settings'),
-                'permissions' => ['keios.multisite.settings'],
+                'url'         => Backend::url('alekseyp/multisite/settings'),
+                'permissions' => ['alekseyp.multisite.settings'],
                 'order'       => 500,
                 'keywords'    => 'multisite domains themes',
             ],
@@ -85,13 +85,13 @@ class Plugin extends PluginBase
          * save to cache and use for theme selection.
          */
         $binds = Cache::rememberForever(
-            'keios_multisite_settings',
+            'alekseyp_multisite_settings',
             function () {
                 try {
                     $cacheableRecords = Setting::generateCacheableRecords();
                 } catch (\Illuminate\Database\QueryException $e) {
                     if (BackendAuth::check()) {
-                        Flash::error(trans('keios.multisite:lang.flash.db-error'));
+                        Flash::error(trans('alekseyp.multisite:lang.flash.db-error'));
                     }
 
                     return null;
@@ -153,7 +153,7 @@ class Plugin extends PluginBase
                     return;
                 }
 
-                $widget->addViewPath('$/keios/multisite/partials/');
+                $widget->addViewPath('$/alekseyp/multisite/partials/');
             }
         );
     }
