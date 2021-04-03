@@ -8,7 +8,7 @@ class SettingsAddMeta extends Migration
     public function up()
     {
         Schema::table('alekseyp_multisite_settings', function ($table) {
-            $table->json('meta');
+            $table->json('meta')->default('null');
         });
     }
 
